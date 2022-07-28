@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "Indonesia-earthquakeliveinfo"
-version = "0.7"
+version = "0.8"
 authors = [
   { name="Muchamad Faiz", email="muchamadfaiz@gmail.com" },
 ]

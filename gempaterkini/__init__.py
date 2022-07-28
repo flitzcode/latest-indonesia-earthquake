@@ -82,6 +82,7 @@ def tampilkan_data(result): #menerima satu argumen --> result
     print(f"Dirasakan: {result['dirasakan']}")
 
 if __name__ == '__main__':
+    print('deskripsi package', description)
     print('Aplikasi utama')
     result = ekstraksi_data()
     tampilkan_data(result)
