@@ -1,8 +1,11 @@
 import requests
 from bs4 import BeautifulSoup
 
+description = 'To get the latest earthquake in Indonesia from BMKG.go.id'
 
-def ekstraksi_data():
+
+def ekstraksi_data(): #fungsi yang tidak menerima argumen atau parameter, mengolah data dari BMKG.go.id
+    #kemudian disimpan dalam betuk dict JSON
     """
     Tanggal: 23 Juli 2022
     Waktu: 14:35:46 WIB
@@ -65,7 +68,7 @@ def ekstraksi_data():
         return None
 
 
-def tampilkan_data(result):
+def tampilkan_data(result): #menerima satu argumen --> result
     if result is None:
         print('Tidak bisa menemukan data gempa terkini')
         return
