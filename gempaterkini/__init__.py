@@ -12,6 +12,10 @@ class Bencana:
         self.description = description
         self.result = None
         self.url = url
+
+    def tampilkan_keterangan(self):
+        print(self.description)
+
     def scraping_data(self):
         print('scraping_data not yet implemented')
 
@@ -26,6 +30,8 @@ class BanjirTerkini(Bencana):
     def __init__(self, url):
         super(BanjirTerkini, self).__init__(url, 'NOT YET IMPLEMENTED, but it should return las flood in indonesia')
 
+    def tampilkan_keterangan(self):
+        print(f'UNDER CONSTRUCTION {self.description}')
 class GempaTerkini(Bencana):
     def __init__(self, url):
         super(GempaTerkini, self).__init__(url, 'To get the latest earthquake in Indonesia from BMKG.go.id' )
@@ -112,12 +118,18 @@ class GempaTerkini(Bencana):
 
 if __name__ == '__main__':
     gempa_di_indonesia = GempaTerkini('https://bmkg.go.id')
-    print('deskripsi class GempaTerkini', gempa_di_indonesia.description)
+    gempa_di_indonesia.tampilkan_keterangan()
     gempa_di_indonesia.run()
 
     banjir_di_indonesia = BanjirTerkini('NOT YET')
-    print('deskripsi class BanjirTerkini', banjir_di_indonesia.description)
+    banjir_di_indonesia.tampilkan_keterangan()
     banjir_di_indonesia.run()
+
+    daftar_bencana = [gempa_di_indonesia, banjir_di_indonesia]
+    print('\nSemua bencana yang ada')
+    for bencana in daftar_bencana:
+        bencana.tampilkan_keterangan()
+
 
     # gempa_di_dunia = GempaTerkini('https://bmkg.go.id')
     # print('deskripsi class GempaTerkini', gempa_di_dunia.description)
